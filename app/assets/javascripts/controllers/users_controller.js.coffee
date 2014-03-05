@@ -1,0 +1,1 @@
+NoteApp.UsersController = Ember.ArrayController.extend()
