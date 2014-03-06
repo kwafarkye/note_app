@@ -1,0 +1,1 @@
+NoteApp.UsersShowController = Ember.Controller.extend()

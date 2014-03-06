@@ -18,4 +18,6 @@
 //= require ember-data
 //= require_self
 //= require note_app
-NoteApp = Ember.Application.create()
+NoteApp = Ember.Application.create({
+	LOG_TRANSITIONS: true
+});
