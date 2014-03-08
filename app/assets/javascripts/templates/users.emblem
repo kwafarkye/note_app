@@ -1,6 +1,5 @@
 ul
 	each user in controller
-		= console.log user
 		li
-			link-to 'users.show' user | {{user.first_name}} {{user.last_name}}
+			link-to 'user' user | {{user.id}} {{user.first_name}} {{user.last_name}}
 = outlet

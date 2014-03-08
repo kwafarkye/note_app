@@ -50,6 +50,7 @@ gem "mongoid", git: "git://github.com/mongoid/mongoid.git"
 gem "moped", github: "mongoid/moped"
 gem "unicorn"
 gem "rabl"
+
 gem "oj"
 
 gem 'ember-rails'

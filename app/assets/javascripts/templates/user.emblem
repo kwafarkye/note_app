@@ -1,1 +1,2 @@
-p Kwaku Farkye
+p = fullName
+p = time_created
