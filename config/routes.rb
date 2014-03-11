@@ -1,7 +1,23 @@
 NoteApp::Application.routes.draw do
   root to: "application#index"
 
+
+  # Set up api Scope
+  scope module: 'api' do
+    # current route: '/api' current url: '/'
+    # Ember API
+    namespace :ember_api, defaults: {format: 'json'} do
+      # current route: '/api/ember_api' current url: '/ember_api'
+      namespace :v0, defaults: {format: 'json'} do
+        # current route: '/api/ember_api/v0' current url: '/ember_api/v0'
+        resources :users
+      end
+    end
+  end
+
   resources :users
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

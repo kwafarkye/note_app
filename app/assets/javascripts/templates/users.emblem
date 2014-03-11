@@ -1,3 +1,4 @@
+//p{action 'alertCount'} Click Me
 ul
 	each user in controller
 		li

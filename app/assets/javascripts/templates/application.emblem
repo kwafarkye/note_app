@@ -1,2 +1,3 @@
-h1 Note App
-= outlet
+.move_margin
+	h1 Note App
+	= outlet

@@ -1,4 +1,9 @@
-collection @users => :users
+object false
 
-node (:id) { |user| user.id.to_s }
-attributes :first_name, :last_name, :email, :created_at
+node (:meta) do
+	{
+		:hello => @users.count
+	}
+end
+
+node (:users) { partial('users/list_users', :object => @users) }

@@ -3,6 +3,7 @@
 NoteApp.Router.map ()->
 	@resource 'users', {path: '/'}
 	@resource 'user', {path: '/users/:user_id'}
+	#@resource 'users', {path: '/communication'}
 	#		path: '/:user_id'
 	#@route 'users', path: '/'
   # @resource('posts')
