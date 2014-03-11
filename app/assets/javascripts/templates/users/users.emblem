@@ -1,0 +1,5 @@
+ul
+	each user in controller
+		li
+			link-to 'user' user | {{user.first_name}} {{user.last_name}}
+= outlet myoutlet

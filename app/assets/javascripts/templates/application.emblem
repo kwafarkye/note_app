@@ -1,3 +1,4 @@
 .move_margin
 	h1 Note App
-	= outlet
+	= outlet user_list
+	= outlet myoutlet
