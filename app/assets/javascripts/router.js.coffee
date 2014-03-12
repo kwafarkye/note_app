@@ -19,6 +19,8 @@ NoteApp.ApplicationRoute = Ember.Route.extend()
 NoteApp.UsersRoute = Ember.Route.extend
 	activate: ->
 		console.log ('Users Route')
+	model: ->
+		@get('store').find('user')
 	renderTemplate: ->
 		@render 'users', {
 			controller: 'users',

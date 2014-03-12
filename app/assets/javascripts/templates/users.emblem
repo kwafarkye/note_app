@@ -1,4 +1,5 @@
 view NoteApp.NewUserView
+a click="alertCount" Number of Clients
 ul
 	each user in controller
 		li
