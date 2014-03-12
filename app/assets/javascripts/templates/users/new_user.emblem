@@ -1,5 +1,7 @@
-label Name
-Ember.TextField valueBinding="view.newUserName"
+label First Name
+Ember.TextField valueBinding="view.newUserFN"
+label Last Name
+Ember.TextField valueBinding="view.newUserLN"
 label Email
 Ember.TextField valueBinding="view.newUserEmail"
 input type="submit" value="add"

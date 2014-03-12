@@ -1,5 +1,6 @@
 NoteApp.UsersController = Ember.ArrayController.extend
 	actions: {
+		
 		show_client: ->
 			alert('Hello')
 
@@ -9,12 +10,19 @@ NoteApp.UsersController = Ember.ArrayController.extend
 			alert(meta)
 
 		# Creates and saves a new user to the db
-		addNewUser: (userName, userEmail) ->
-			NoteApp.User.createRecord()
-			@get('store').createRecord( 'user',
-				name: userName,
-				email: userEmail,
-				created_at: new Date()
+		addNewUser: (userFN, userLN, userEmail) ->
+			event.preventDefault()
+			# Create a new user record
+			nuser = NoteApp.User.createRecord('user',
+				first_name: userFN,
+				last_name: userLN,
+				email: userEmail
 			)
-			#@get('store').commit()
+			console.log(nuser.changedAttributes())
+			# TODO: Validations
+			# Set the attributes
+			#nuser.set('first_name', userName)
+			#nuser.set('last_name', userName)			
+			#nuser.set('email', userEmail)
+			#console.log(nuser.changedAttributes())
 	}

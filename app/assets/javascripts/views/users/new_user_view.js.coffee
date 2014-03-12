@@ -5,15 +5,16 @@ NoteApp.NewUserView = Ember.View.extend
 
 	submit: ->
 		# Get the name and email
-		uName = @get('newUserName')
+		uFName = @get('newUserFN')
+		uLName = @get('newUserLN')
 		uEmail = @get('newUserEmail')
 		# TODO: Could perform validations here
-		console.log uName
+		console.log uFName
 		console.log uEmail
 		# Send to controller
-		@get('controller').send 'addNewUser', @get('newUserName'), @get('newUserEmail')
+		@get('controller').send 'addNewUser', uFName, uLName, uEmail
 		# Clear values
-		@set('newUserName', '')
+		@set('newUserFN', '')
+		@set('newUserLN', '')
 		@set('newUserEmail', '')
 		false
-		event.preventDefault()

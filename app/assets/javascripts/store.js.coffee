@@ -15,6 +15,6 @@ NoteApp.RESTAdapter = DS.RESTAdapter.extend
 NoteApp.Store = DS.Store.extend
 	adapter: NoteApp.RESTAdapter
 
-NoteApp.RESTAdapter.configure("plurals", entry: "users")
+#NoteApp.RESTAdapter.configure("plurals", entry: "users")
 
 #NoteApp.RESTAdapter.configure("plurals", entry: "entries")

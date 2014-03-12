@@ -1,3 +1,4 @@
+p Hello There
 view NoteApp.NewUserView
 ul
 	each user in controller
