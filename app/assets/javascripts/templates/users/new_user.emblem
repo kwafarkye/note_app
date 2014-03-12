@@ -1,0 +1,5 @@
+label Name
+Ember.TextField valueBinding="view.newUserName"
+label Email
+Ember.TextField valueBinding="view.newUserEmail"
+input type="submit" value="add"

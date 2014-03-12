@@ -38,11 +38,11 @@ NoteApp.UsersIndexRoute = Ember.Route.extend
 NoteApp.UserRoute = Ember.Route.extend
 	# Use before model to check if
 	# we want to transition
-	beforeModel: (transition) ->
-		if 1 > 0
-			alert('Error')
-			transition.abort()
-		return
+	#beforeModel: (transition) ->
+	#	if 1 > 0
+	#		alert('Error')
+	#		transition.abort()
+	#	return
 
 	activate: ->
 		console.log ('User Route')

@@ -6,7 +6,7 @@ NoteApp.RESTAdapter = DS.RESTAdapter.extend
 	serializer: DS.RESTSerializer.extend
 		primaryKey: (type) ->
 			'id'
-
+			
 # Set up an alternative adapter for the users
 #NoteApp.UsersAdapter = DS.RESTAdapter.extend
 #	namespace: 'ember_api/v0'
