@@ -1,4 +1,6 @@
 class Api::EmberApi::EmberApiController < ApplicationController
+	# Check the request header before every request
+	#before_action :ember_api_header_check
 
 	# Check to make sure a valid API Key is sent
 	# in the request header

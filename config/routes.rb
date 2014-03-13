@@ -1,4 +1,5 @@
 NoteApp::Application.routes.draw do
+
   root to: "application#index"
 
 
@@ -10,7 +11,9 @@ NoteApp::Application.routes.draw do
       # current route: '/api/ember_api' current url: '/ember_api'
       namespace :v0, defaults: {format: 'json'} do
         # current route: '/api/ember_api/v0' current url: '/ember_api/v0'
-        resources :users
+        resources :users do
+          resources :notes
+        end
       end
     end
   end
