@@ -18,9 +18,7 @@ NoteApp::Application.routes.draw do
     end
   end
 
-  resources :users do
-    resources :notes
-  end
+  match '/users/:user_id', to: 'api/ember_api/v0/users#show', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

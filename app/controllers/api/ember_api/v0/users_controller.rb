@@ -1,11 +1,13 @@
 class Api::EmberApi::V0::UsersController < Api::EmberApi::EmberApiController
-	
+	respond_to :json
+
 	def index
 		@users = User.all
 	end
 
 	def show
-		@user = User.find(params[:id])
+		@user = User.find(params[:user_id])
+		redirect_to root_path
 	end
 
 	def create
