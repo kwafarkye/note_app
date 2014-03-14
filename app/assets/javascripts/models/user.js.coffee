@@ -3,7 +3,7 @@ NoteApp.User = DS.Model.extend
 	last_name: DS.attr 'string'
 	email: DS.attr 'string'
 	created_at: DS.attr 'date'
-	notes: DS.hasMany('note')
+	notes: DS.hasMany('note', async: true)
 	fullName: (->
 		@get('first_name') + ' ' + @get('last_name')
 	).property('first_name', 'last_name')

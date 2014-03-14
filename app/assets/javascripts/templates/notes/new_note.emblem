@@ -1,0 +1,3 @@
+p New Note
+Ember.TextArea valueBinding="view.newNoteContent"
+input type="submit" value="add note"

@@ -1,4 +1,4 @@
-p Hello There
+a click="alertCount" Number of Users
 view NoteApp.NewUserView
 ul
 	each user in controller

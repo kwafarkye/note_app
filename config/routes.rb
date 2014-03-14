@@ -18,8 +18,9 @@ NoteApp::Application.routes.draw do
     end
   end
 
-  resources :users
-
+  resources :users do
+    resources :notes
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,3 +1,6 @@
-span = fullName
-span    
-span = time_created
+p = fullName
+p = time_created
+view NoteApp.NewNoteView
+h3 Notes:
+each note in model.notes
+	p= note.note_content

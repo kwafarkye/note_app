@@ -1,0 +1,5 @@
+p User's notes go here
+ul
+	each note in controller
+		li Hey
+		li= note.note_content

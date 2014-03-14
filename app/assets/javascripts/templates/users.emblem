@@ -1,7 +1,0 @@
-view NoteApp.NewUserView
-a click="alertCount" Number of Clients
-ul
-	each user in controller
-		li
-			link-to 'user' user | {{user.id}} {{user.first_name}} {{user.last_name}}
-= outlet
