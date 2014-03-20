@@ -64,15 +64,16 @@ NoteApp.UserSerializer = DS.RESTSerializer.extend
 			# Set the user notes to the id array
 			user.notes = note_id_arr
 		payload = {users: user_payload, notes: notes_payload}
-		return @._super(store, type, payload, id, requestType)
+		return @_super(store, type, payload, id, requestType)
 
 	extractSingle: (store, type, payload, id, requestType) ->
 		console.log('Single extraction')
 		# Make a hash and add user as a key
+		console.log payload
 		user_payload = payload #{ user: payload }
 		notes_payload = []
 		notes_arr_id = []
-		console.log user_payload.notes.length
+		#console.log user_payload.notes.length
 		# Run through notes and extract notes
 		unless user_payload.notes == undefined
 			user_payload.notes.forEach (note) ->
@@ -84,7 +85,7 @@ NoteApp.UserSerializer = DS.RESTSerializer.extend
 			user_payload.notes = notes_arr_id
 		payload = {user: user_payload, notes: notes_payload }
 		console.log payload
-		return @._super(store, type, payload, id, requestType)
+		return @_super(store, type, payload, id, requestType)
 	serializeHasMany: (record, json, relationship) ->
 		console.log 'Serialize Has Many USER'
 	serializeBelongsTo: (record, json, relationship) ->
